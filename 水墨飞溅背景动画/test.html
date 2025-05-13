@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            /* background-color: orange; */
+            /* 设置时box2消失，不设置时box2显现 */
+        }
+
+        body {
+            height: 100vh;
+            background-color: pink;
+        }
+
+        .container {
+            width: 500px;
+            height: 500px;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            position: absolute;
+            z-index: -99;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

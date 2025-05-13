@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面滚动视差效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 200vh;
+        }
+
+        .background {
+            height: 200vh;
+            background-image: url(./mountain.jpg);
+            background-size: cover;
+            background-position: 50%;
+            font: 900 39rem '';
+            line-height: 130vh;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            text-align: center;
+        }
+
+        .background::before {
+            content: '';
+            background-image: inherit;
+            background-size: cover;
+            background-position: 50%;
+            position: absolute;
+            inset: 0;
+            z-index: -99;
+        }
+
+        h1 {
+            position: absolute;
+            width: 100%;
+            color: #fff;
+            letter-spacing: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>bilibili<br />山羊の前端小窝</h1>
+    <div class="background">Goat</div>
+    <script>
+        const background = document.querySelector(".background");
+
+        document.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
+
+            if (scrollY !== 0) {
+                background.style.backgroundPosition = `calc(50% + ${scrollY}px) calc(50% + ${scrollY}px)`;
+            } else {
+                background.style.backgroundPosition = "";
+            }
+        })
+    </script>
+</body>
+
+</html>

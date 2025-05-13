@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本遮罩</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <main>
+        <h1>COOL TEXT CLIP EFFECT</h1>
+        <!-- <div class="mask-wrapper">
+            <video src="./2141797-uhd_2560_1440_30fps.mp4" autoplay loop muted></video>
+            <svg width="0" height="0" viewBox="0 0 1361 512"></svg>
+        </div> -->
+        <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+            <text x="10" y="50" font-family="Arial" font-size="40" fill="black">GRAVITY</text>
+          </svg>
+          <svg width="300" height="100" xmlns="http://www.w3.org/2000/svg">
+            <!-- 定义遮罩 -->
+            <mask id="textMask">
+              <rect width="100%" height="100%" fill="white" /> <!-- 遮罩背景为白色（完全可见） -->
+              <text x="10" y="60" font-family="Arial" font-size="50" fill="black">GRAVITY</text> <!-- 遮罩内容为黑色（完全透明） -->
+            </mask>
+          
+            <!-- 应用遮罩的图形 -->
+            <rect width="100%" height="100%" fill="blue" mask="url(#textMask)" /> <!-- 蓝色矩形，应用遮罩 -->
+          </svg>
+    </main>
+</body>
+</html>

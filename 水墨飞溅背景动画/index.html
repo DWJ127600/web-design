@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水墨飞溅背景动画</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background-color: #000;
+            color: white;
+        }
+
+        .page {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text {
+            position: relative;
+            z-index: 1;
+        }
+
+        .text h1 {
+            font-size: 7rem;
+        }
+
+        .text p {
+            font-size: 2rem;
+        }
+
+        .page::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url(./images/Background\ image.jpg);
+            background-size: cover;
+            background-position: center;
+            /* mask-image: url(./images/ezgif-3-6b6c1ea089.gif); */
+            mask-size: cover;
+            mask-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="text">
+            <h1>DevWave Diaries</h1>
+            <p>Subscribe to see more</p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cacheBuster = Date.now();
+            const style = document.createElement('style');
+            style.innerHTML = `
+            .page::before {
+                mask-image: url("./images/ezgif-3-6b6c1ea089.gif?reload=${cacheBuster}");
+            }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+
+</html>

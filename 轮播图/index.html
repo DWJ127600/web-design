@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="shell">
+        <input type="radio" name="music" id="item1" checked>
+        <input type="radio" name="music" id="item2">
+        <input type="radio" name="music" id="item3">
+        <div class="cards">
+            <label class="card" for="item1" id="song1">
+                <img src="./image/1.jpg">
+            </label>
+            <label class="card" for="item2" id="song2">
+                <img src="./image/2.jpg">
+            </label>
+            <label class="card" for="item3" id="song3">
+                <img src="./image/3.jpg">
+            </label>
+        </div>
+        <div class="player">
+            <div class="info-area">
+                <img src="./image/play.png" id="play">
+                <div class="info">
+                    <div class="song-info">
+                        <div class="title">How You Like That</div>
+                        <div class="subheading">
+                            <div class="singer">BLACKPINK</div>
+                            <div class="time">3:01</div>
+                        </div>
+                    </div>
+                    <div class="song-info">
+                        <div class="title">DDU-DU DDU-DU</div>
+                        <div class="subheading">
+                            <div class="singer">BLACKPINK</div>
+                            <div class="time">3:29</div>
+                        </div>
+                    </div>
+                    <div class="song-info">
+                        <div class="title">Kill This Love</div>
+                        <div class="subheading">
+                            <div class="singer">BLACKPINK</div>
+                            <div class="time">3:09</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <span class="progress"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
